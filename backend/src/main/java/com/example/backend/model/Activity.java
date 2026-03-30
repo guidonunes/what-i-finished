@@ -24,8 +24,8 @@ public class Activity {
     @Column(length = 500)
     private String notes;
 
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "category_id", nullable = false)
+    @Enumerated(EnumType.STRING)
+    @Column(nullable = false)
     private Category category;
 
     public Activity() {}
