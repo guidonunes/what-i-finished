@@ -28,7 +28,7 @@ public class ActivityService {
         return activityRepository.save(activity);
     }
 
-    public Activity updateActivity(Long id, Activity updatedActivity, Long categoryId) {
+    public Activity updateActivity(Long id, Activity updatedActivity) {
         Activity existingActivity = activityRepository.findById(id)
                 .orElseThrow(() -> new RuntimeException("Activity not found with id: " + id));
 
@@ -38,7 +38,7 @@ public class ActivityService {
         existingActivity.setNotes(updatedActivity.getNotes());
 
         existingActivity.setCategory(updatedActivity.getCategory());
-        
+
         return activityRepository.save(existingActivity);
     }
 

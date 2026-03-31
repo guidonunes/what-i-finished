@@ -27,8 +27,7 @@ public class ActivityController {
 
     @PostMapping
     public ResponseEntity<Activity> addActivity(
-            @RequestBody Activity activity,
-            @RequestParam Long categoryId
+            @RequestBody Activity activity
             ) {
         return ResponseEntity.ok(activityService.addActivity(activity));
     }
@@ -36,14 +35,13 @@ public class ActivityController {
     @PutMapping("/{id}")
     public ResponseEntity<Activity> updateActivity(
             @PathVariable Long id,
-            @RequestBody Activity activity,
-            @RequestParam(required = false) Long newCategoryId
+            @RequestBody Activity activity
     ) {
-        return ResponseEntity.ok(activityService.updateActivity(id, activity, newCategoryId));
+        return ResponseEntity.ok(activityService.updateActivity(id, activity));
     }
 
     @DeleteMapping("/{id}")
-    public ResponseEntity<Activity> deleteActivity(@PathVariable Long id) {
+    public ResponseEntity<Void> deleteActivity(@PathVariable Long id) {
         activityService.deleteActivity(id);
         return ResponseEntity.noContent().build();
     }
