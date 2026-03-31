@@ -30,7 +30,7 @@ public class ActivityController {
             @RequestBody Activity activity,
             @RequestParam Long categoryId
             ) {
-        return ResponseEntity.ok(activityService.addActivity(activity, categoryId));
+        return ResponseEntity.ok(activityService.addActivity(activity));
     }
 
     @PutMapping("/{id}")
