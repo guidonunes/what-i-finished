@@ -1,4 +1,4 @@
-package br.com.fiap.android_app.ui.theme
+package com.example.whatifinished.ui.theme
 
 import androidx.compose.material3.Typography
 import androidx.compose.ui.text.TextStyle

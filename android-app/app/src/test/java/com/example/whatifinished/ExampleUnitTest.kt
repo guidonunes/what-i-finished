@@ -1,4 +1,4 @@
-package br.com.fiap.android_app
+package com.example.whatifinished
 
 import org.junit.Test
 

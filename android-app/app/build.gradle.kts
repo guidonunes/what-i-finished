@@ -4,7 +4,7 @@ plugins {
 }
 
 android {
-    namespace = "br.com.fiap.android_app"
+    namespace = "com.example.whatifinished"
     compileSdk {
         version = release(36) {
             minorApiLevel = 1
@@ -12,7 +12,7 @@ android {
     }
 
     defaultConfig {
-        applicationId = "br.com.fiap.android_app"
+        applicationId = "com.example.whatifinished"
         minSdk = 28
         targetSdk = 36
         versionCode = 1
