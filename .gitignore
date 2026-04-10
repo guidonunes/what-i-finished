@@ -37,3 +37,6 @@ Thumbs.db
 
 # Docker (if you use it later)
 .docker/
+
+.codex
+CODEX.md
