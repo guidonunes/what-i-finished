@@ -9,7 +9,7 @@ import retrofit2.http.Path
 
 interface WhatIFinishedApiService {
     @GET("/api/activities")
-    suspend fun getActivities(): List<ActivityDtoDto>
+    suspend fun getActivities(): List<ActivityDto>
 
     @POST("/api/activities")
     suspend fun addActivity(@Body activity: ActivityDto): ActivityDto
@@ -17,5 +17,3 @@ interface WhatIFinishedApiService {
     @DELETE("/api/activities/{id}")
     suspend fun deleteActivity(@Path("id") id: Long)
 }
-
-
