@@ -1,6 +1,7 @@
 package com.example.whatifinished.network
 
 import com.example.whatifinished.data.ActivityDto
+import retrofit2.http.Body
 import retrofit2.http.DELETE
 import retrofit2.http.GET
 import retrofit2.http.POST
