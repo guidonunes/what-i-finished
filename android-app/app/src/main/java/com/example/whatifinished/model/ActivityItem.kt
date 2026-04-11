@@ -1,9 +1,8 @@
-package com.example.whatifinished.data
+package com.example.whatifinished.model
 
-import com.example.whatifinished.model.Category
 import com.google.gson.annotations.SerializedName
 
-data class ActivityDto(
+data class ActivityItem(
     @SerializedName("id")
     val id: Long? = null,
     @SerializedName("title")
