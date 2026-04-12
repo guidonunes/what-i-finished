@@ -1,4 +1,4 @@
-package com.example.whatifinished.ui
+package com.example.whatifinished.viewmodel
 
 import com.example.whatifinished.model.ActivityItem
 

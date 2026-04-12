@@ -1,7 +1,7 @@
-package com.example.whatifinished.ui
+package com.example.whatifinished.viewmodel
 
-import androidx.lifecycle.viewModelScope
 import androidx.lifecycle.ViewModel
+import androidx.lifecycle.viewModelScope
 import com.example.whatifinished.repository.ActivityRepository
 import com.example.whatifinished.repository.RepositoryResult
 import dagger.hilt.android.lifecycle.HiltViewModel
