@@ -7,7 +7,7 @@ import retrofit2.http.GET
 import retrofit2.http.POST
 import retrofit2.http.Path
 
-interface WhatIFinishedApiService {
+interface WhatIFinishedApi {
     @GET("/api/activities")
     suspend fun getActivities(): List<ActivityDto>
 

@@ -1,6 +1,6 @@
 package com.example.whatifinished.di
 
-import com.example.whatifinished.network.WhatIFinishedApiService
+import com.example.whatifinished.network.WhatIFinishedApi
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -28,7 +28,7 @@ object NetworkModule {
 
     @Provides
     @Singleton
-    fun provideApiService(retrofit: Retrofit): WhatIFinishedApiService {
-        return retrofit.create(WhatIFinishedApiService::class.java)
+    fun provideApiService(retrofit: Retrofit): WhatIFinishedApi {
+        return retrofit.create(WhatIFinishedApi::class.java)
     }
 }

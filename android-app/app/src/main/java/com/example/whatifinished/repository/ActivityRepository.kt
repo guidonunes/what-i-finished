@@ -1,25 +1,11 @@
 package com.example.whatifinished.repository
 
 import com.example.whatifinished.model.ActivityItem
-import com.example.whatifinished.model.toDomainModel
-import com.example.whatifinished.model.toDto
-import com.example.whatifinished.network.WhatIFinishedApiService
-import javax.inject.Inject
 
-class ActivityRepository @Inject constructor(
-    private val api: WhatIFinishedApiService
-) {
-    suspend fun getActivities(): List<ActivityItem> {
-        return api.getActivities().map { it.toDomainModel() }
-    }
+interface ActivityRepository {
+    suspend fun getActivities(): RepositoryResult<List<ActivityItem>>
 
-    suspend fun addActivity(activity: ActivityItem) : ActivityItem {
-        val dtoToSend = activity.toDto()
-        val responseDto = api.addActivity(dtoToSend)
-        return responseDto.toDomainModel()
-    }
+    suspend fun addActivity(activity: ActivityItem): RepositoryResult<ActivityItem>
 
-    suspend fun deleteActivity(id: Long) {
-        api.deleteActivity(id)
-    }
+    suspend fun deleteActivity(id: Long): RepositoryResult<Unit>
 }
