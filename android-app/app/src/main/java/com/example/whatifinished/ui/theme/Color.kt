@@ -17,3 +17,5 @@ val CategoryBooks = Color(0xFFFFCA28)   // Amber
 val CategoryFilms = Color(0xFFFF5252)   // Vibrant Red
 val CategoryCourses = Color(0xFF448AFF) // Bright Blue
 val CategoryOthers = Color(0xFF9E9E9E)  // Neutral Grey
+
+val StarYellow = Color(0xFFFFC107)

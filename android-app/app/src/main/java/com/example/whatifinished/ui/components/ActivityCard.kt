@@ -18,6 +18,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.example.whatifinished.model.ActivityItem
 import com.example.whatifinished.model.Category
+import com.example.whatifinished.ui.extensions.toFormattedDate
 import com.example.whatifinished.ui.theme.CategoryBooks
 import com.example.whatifinished.ui.theme.CategoryCourses
 import com.example.whatifinished.ui.theme.CategoryFilms
@@ -57,18 +58,14 @@ fun ActivityCard(
                     overflow = TextOverflow.Ellipsis
                 )
                 activity.rating?.let { rating ->
-                    Text(
-                        text = "$rating/5",
-                        style = MaterialTheme.typography.labelSmall,
-                        color = MaterialTheme.colorScheme.primary
-                    )
+                    RatingStars(rating = rating)
                 }
             }
 
             CategoryChip(category = activity.category)
 
             Text(
-                text = activity.completionDate,
+                text = activity.completionDate.toFormattedDate(),
                 style = MaterialTheme.typography.labelSmall,
                 color = MaterialTheme.colorScheme.onSurfaceVariant
             )
@@ -132,7 +129,7 @@ private fun ActivityCardPreview() {
                 id = 1L,
                 title = "The Witcher 3",
                 category = Category.GAMES,
-                rating = 5,
+                rating = 3,
                 completionDate = "2026-04-12",
                 notes = "Finished all main quests"
             )

@@ -19,6 +19,7 @@ import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import com.example.whatifinished.model.ActivityItem
 import com.example.whatifinished.model.Category
 import com.example.whatifinished.ui.components.ActivityCard
+import com.example.whatifinished.ui.components.AppLogo
 import com.example.whatifinished.ui.components.EmptyStateMessage
 import com.example.whatifinished.ui.components.LoadingSpinner
 import com.example.whatifinished.ui.theme.Dimens
@@ -96,16 +97,13 @@ fun MainListContent(
                 modifier = Modifier
                     .fillMaxWidth()
                     .padding(bottom = Dimens.SectionSpacing),
-                verticalArrangement = Arrangement.spacedBy(Dimens.ContentSpacing)
+                verticalArrangement = Arrangement.spacedBy(Dimens.ContentSpacing),
+                horizontalAlignment = androidx.compose.ui.Alignment.CenterHorizontally
             ) {
+                AppLogo()
                 Text(
-                    text = "What I Finished",
+                    text = "What I Finished?",
                     style = MaterialTheme.typography.titleLarge,
-                    color = MaterialTheme.colorScheme.onBackground
-                )
-                Text(
-                    text = "A running list of completed activities across every category.",
-                    style = MaterialTheme.typography.bodyMedium,
                     color = MaterialTheme.colorScheme.onSurfaceVariant
                 )
             }
@@ -168,7 +166,7 @@ private fun previewActivities() = listOf(
         id = 2L,
         title = "Clean Architecture",
         completionDate = "2026-04-02",
-        rating = 4,
+        rating = 3,
         notes = "Strong revisit on boundaries and use cases.",
         category = Category.BOOKS
     )
